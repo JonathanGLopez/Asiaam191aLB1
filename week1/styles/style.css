@@ -1,4 +1,6 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500&display=swap');
+
 
 
 body{
@@ -8,6 +10,7 @@ body{
     grid-template-areas: "header" "main_content" "footer";
     background-color: rgb(142, 146, 251);
     /* height: 100vh; */
+    font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 header{

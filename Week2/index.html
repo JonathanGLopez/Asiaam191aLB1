@@ -1,60 +1,47 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Hello World</title>
+        <title>My Maps -Jonathan</title>
         <meta charset="utf-8" />
         <link rel="shortcut icon" href="#">
         <link rel="stylesheet" href="styles/style.css">
+
+        <!-- Leaflet's css-->
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+
+        <!-- Leaflet's JavaScript-->
+        <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+
     </head>
 
     <body>
+        <header> 
+            <a href="index.html">Home</a>
+            <a >My Maps </a>
+            <a href="https://www.intsagram.com/jonathannnlopez/" >Instagram</a>
+            <a href="https://www.linkedin.com/in/jonathan-lopez-765b78236/" >LinkedIn< </a>
+        </header>
+
+        
         <div class="main">
-            <div id="header" style="text-align: center">
+            <div id="contents">
                 <h1 class="textstyle"> Jonathan Lopez Map Portfolio</h1>
                 <h2 class="textstyle"> AA191A - Web Development and GIS for Social Change</h2>
-                <img src="/Users/jonathanlopez/Desktop/Asiam191A/Asiaam191aLB1-1/week 1/Images/IMG_5326.heic" alt="Vibing"/>
+                
             </div>
-            <div id="contents">
-                <h2> 4th Year Majoring in Public Affairs with a Labor Studies Minor and Digiatl Humanities minor</h2>
-                <p> What's supppp, My name is Jonathan Lopez and I am 4th year at UCLA. I am born and rasied in Los Angeles and the proud son of two 
-                   Central American Immigrant parents from Guatemala and El Salvador. This working class background has shaped and influenced me to pursue a life long journey for economic 
-                   and political change. This is why as a critical digital map maker I seek to use GIS and web development to serve the working class of this city  </p>
-                   <div id="header" style="text-align: center"></div>
-                   <h1 class="textstyle"> More About Me</h1>
-         <table class="list">  
-            <tbody>
-                <tr>
-                    <td>
-                        <h2> Some of my hobbies</h2>
-                        <ul class="liststyle"> 
-                            <li> Collecting Vinyls and discovering new music </li>
-                            <li> Hanging out with the homies </li>
-                            <li> Playing soccer with my little brother </li>
-                            <li> Trying to get back into film and photography </li>
-                            <li>Working out </li>
-                        </ul>
-                    </td>  
-                    <td>                        
-                            <h2>My favorite Artist</h2>   
-                            <ol> 
-                                <li> Steve Lacy</li>
-                                <li> Isaiah rashad </li>
-                                <li>  Schoolboy Q
-                                <li> Anthony Santos </li>  
-                                 <li> Smino </li>
-                         </ol>
-                    </td> 
-                </tr>
-                   
-          </div>
-        <div id="footer" style="text-align: center;">
-                Copyright (2023)
-                    </div>
-            </body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
-
+            <div> 
+                <h3 class="heading"> Places I like to Eat</h3>
+                <div id="the_map2"></div>
+                <h3 class="heading"> Where my family is from</h3>
+                <div id="the_map"></div>
+                <div id="the_map3"></div> 
+            </div>    
         </div>
-        <div id="footer">
-            Copyright(2022)
+            <script src="js/init.js"></script>
+            
+    <div id="footer" style="text-align: center;">
+                    Copyright (2023)
         </div>
-    </body>
+     </body>
 </html>
