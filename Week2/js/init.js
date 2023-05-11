@@ -7,15 +7,14 @@ let esri_basemap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/serv
 });
 
 // Second map
-const eatingmap = L.map('the_map2').setView([34.0709, -118.444], 1);
+const eatingmap = L.map('the_map2').setView([33.98915169248797, -118.26572013289189], 10);
 
 //JavaScript let variable declaration to create a marker
-let eat1 = L.marker([37.0709, -118.444]).addTo(eatingmap) 
-        .bindPopup('Math Sciences 4328 aka the Technology Sandbox<br> is the lab where I work in ')
+let eat1 = L.marker([33.98915169248797, -118.26572013289189]).addTo(eatingmap) 
+        .bindPopup('Tacos El Poblanos<br> This area in general has the best tacos in LA')
         .openPopup();
 // Leaflet tile layer, i.e. the base map
-esri_basemap.addTo(eatingmap); 
-
+esri_basemap.addTo(eatingmap);
 
 
 // Third map
@@ -31,7 +30,7 @@ function addMarker(lat,lng,title,message,map){
     let targetmap
     if(map=="eating"){
     targetmap=eatingmap
-
+    createButtons(lat,lng,title); 
     }
     if(map=="visit"){
         targetmap=placesvisit
@@ -41,5 +40,29 @@ function addMarker(lat,lng,title,message,map){
     return message
 }
 
-addMarker(37, -110, "Location 1", "Hello, From Location 1", "visit" ) 
-addMarker(37, -110, "Location 1", "Hello, From Location 1", "eating" ) 
+addMarker(34.01515345015369, -118.3087611157807, "Paseo San Miguel", "Well known chain that serves authentic salvadorean food", "eating" ) 
+addMarker(34.05855647658122, -118.27228961422973,"Guatemalan Night market", "A unique street food area where vendor sell authentic guatemalan food", "eating")
+
+//function for buttons
+function createButtons(lat,lng,title){
+    const newButton = document.createElement("button"); 
+    newButton.id = "button"+title; 
+    newButton.innerHTML = title; 
+    newButton.setAttribute("lat",lat); 
+    newButton.setAttribute("lng",lng); 
+    newButton.addEventListener('click', function(){
+        map.flyTo([lat,lng]); 
+    })
+    document.getElementById("contents").appendChild(newButton); 
+}
+
+
+
+
+
+
+
+
+
+// adding markers to my map that shows where my family is from
+addMarker(13.842151285939588, -88.85539440687805, "Illobasco, El Salvador", "This is where my grandma is from. My mom would spend a lot of time here", "placesvisit")
