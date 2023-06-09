@@ -6,15 +6,18 @@
 body{
     display: grid;
     /* grid-template-columns: 1fr;  */
-    grid-auto-rows: auto 1fr;
+    grid-template-rows: 50px auto auto;
     grid-template-areas: "header" "main_content" "footer";
     background-color: rgb(142, 146, 251);
+    gap: 10px;
     height: 100vh; 
     font-family: 'Sofia Sans Condensed', sans-serif;
 }
 
 header{
     grid-area: header;
+    justify-self: center;
+    align-self: center;
 }
 
 #footer{
@@ -35,8 +38,9 @@ header{
 }
 #contents{
     grid-area: content;
-    
-    
+    display: grid;
+    grid-template-rows: 1fr 3fr; 
+    grid-template-areas: "buttonHome" "survey"
 }
 
 
@@ -45,7 +49,15 @@ header{
     width: 80vh;
     grid-area: main_map;
 }
+#theSurvey{
+    grid-area: survey; 
+}
 
+#placeForButtons{
+    grid-area: buttonHome;
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
 
 

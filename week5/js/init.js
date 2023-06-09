@@ -35,8 +35,8 @@ function processData(results){
       addMarker(
         data.lat,
         data.lng,
-        data['Location of encounter with police.'],
-        data['What happened during this encounter with the police? Example: Pulled over for having a broken tail light.']
+        data['Location of encounter with police. '],
+        data['What happened during this encounter with the police? Example: Pulled over for having a broken tail light. ']
       );
     });
    }
@@ -45,6 +45,7 @@ function processData(results){
 
 
 loadData(dataUrl) 
+
 
 
 
