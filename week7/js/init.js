@@ -26,14 +26,14 @@ const map = L.map('the_map').setView(mapOptions.center, mapOptions.zoom);
 L.control.layers(null,layers).addTo(map)
 
 
-let Esri_WorldGrayCanvas = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ',
-	maxZoom: 16
+let OpenStreetMap_DE = L.tileLayer('https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', {
+	maxZoom: 18,
+	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 });
 
 
 
-Esri_WorldGrayCanvas.addTo(map);
+OpenStreetMap_DE.addTo(map);
 
 function createButtons(lat,lng,title){
     const newButton = document.createElement("button"); // adds a new button
