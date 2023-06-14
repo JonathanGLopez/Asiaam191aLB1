@@ -12,7 +12,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 function addMarker(lat,lng,title,message){
     console.log(message)
     L.marker([data.lat,data.lng]).addTo(map).bindPopup(`<h2> encounter with police: ${data['Location of encounter with police. ']}</h2> <h3>${data['What happened during this encounter with the police? Example: Pulled over for having a broken tail light. ']}</h3>`)
-    createButtons(data.lat,data.lng,data['Location of encounter with police. '])
+    createButtons(lat,lng,title)
     return
 }
 
@@ -63,6 +63,6 @@ loadData(dataUrl)
 function addMarker(lat,lng,title,message){
     // console.log(message)
     L.marker([lat,lng]).addTo(map).bindPopup(`<h2>${title}</h2> <h3>${message}</h3>`)
-    createButtons(lat,lng,location)
+    createButtons(lat,lng,title)
     return message
 }
